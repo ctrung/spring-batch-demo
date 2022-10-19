@@ -1,0 +1,19 @@
+spring:
+  batch:
+    job:
+      enabled: false
+    jdbc:
+      initialize-schema: always
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:spring-batch;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+  sql:
+    init:
+      platform: h2
+  h2:
+    console:
+      enabled: true
+  config:
+    import: classpath:more.yml
